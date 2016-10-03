@@ -19,11 +19,16 @@ class ViewController: UIViewController {
         let city = cityTextField.text
         
             openWeatherMapAPI.requestCurrentWeather(city: city!, callback: { (json: Any) -> Void in
+                //Description cast
                 let dict = json as! NSDictionary
                 let cityWeatherArray = dict["weather"] as! NSArray
                 let cityWeatherDict = cityWeatherArray[0] as! NSDictionary
+                let description = cityWeatherDict["description"] as! String
                 
-                print(cityWeatherDict["description"])
+                
+                
+                
+                self.descriptionLabel.text = "Description: \(description)"
             })
     }
     
