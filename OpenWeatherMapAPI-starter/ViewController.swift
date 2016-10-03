@@ -25,10 +25,17 @@ class ViewController: UIViewController {
                 let cityWeatherDict = cityWeatherArray[0] as! NSDictionary
                 let description = cityWeatherDict["description"] as! String
                 
+                //Temperature cast
+                let cityMain = dict["main"] as! NSDictionary
                 
                 
+                let minTemp = cityMain["temp_min"]
+                let maxTemp = cityMain["temp_min"]
                 
+                //Label setting
                 self.descriptionLabel.text = "Description: \(description)"
+                self.minTempLabel.text = "Min: \(minTemp)"
+                self.maxTempLabel.text = "Max: \(maxTemp)"
             })
     }
     
