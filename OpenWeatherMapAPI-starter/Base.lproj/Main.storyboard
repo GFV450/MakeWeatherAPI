@@ -48,6 +48,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2js-7H-vpH">
                                 <state key="normal" title="Forecast"/>
                                 <connections>
+                                    <action selector="forecastButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5cg-eJ-qrm"/>
                                     <segue destination="tay-zr-blH" kind="show" id="qgK-sc-7xX"/>
                                 </connections>
                             </button>

@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     @IBAction func goButtonPressed(_ sender: AnyObject) {
         let city = cityTextField.text
         
-            openWeatherMapAPI.requestCurrentWeather(city: city!, callback: { (json: Any) -> Void in
+        openWeatherMapAPI.requestCurrentWeather(buttonPressed: "weather", city: city!, callback: { (json: Any) -> Void in
                 //Description cast
                 let dict = json as! NSDictionary
                 let cityWeatherArray = dict["weather"] as! NSArray
@@ -37,6 +37,14 @@ class ViewController: UIViewController {
                 self.minTempLabel.text = "Min: \(minTemp)"
                 self.maxTempLabel.text = "Max: \(maxTemp)"
             })
+    }
+    
+    @IBAction func forecastButtonPressed(_ sender: AnyObject) {
+        let city = cityTextField.text
+        
+        openWeatherMapAPI.requestCurrentWeather(buttonPressed: "forecast", city: city!, callback: { (json: Any) -> Void in
+            
+        })
     }
     
   let openWeatherMapAPI = OpenWeatherMapAPI()

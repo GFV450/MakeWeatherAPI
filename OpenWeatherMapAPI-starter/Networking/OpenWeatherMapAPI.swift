@@ -11,10 +11,9 @@ import Foundation
 class OpenWeatherMapAPI {
   
     
-    func requestCurrentWeather(city: String, callback: @escaping (Any) -> Void )
+    func requestCurrentWeather(buttonPressed: String, city: String, callback: @escaping (Any) -> Void )
   {
-    
-    let urlString: String = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=76206cd3a7796e7db880c8385c0786ef"
+    let urlString: String = "http://api.openweathermap.org/data/2.5/" + buttonPressed + "?q=" + city + "&appid=76206cd3a7796e7db880c8385c0786ef"
     let session: URLSession = URLSession.shared
     let url = URL(string: urlString)
     
