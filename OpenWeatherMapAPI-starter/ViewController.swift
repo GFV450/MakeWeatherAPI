@@ -43,7 +43,11 @@ class ViewController: UIViewController {
         let city = cityTextField.text
         
         openWeatherMapAPI.requestCurrentWeather(buttonPressed: "forecast", city: city!, callback: { (json: Any) -> Void in
-            
+            let dict = json as! NSDictionary
+            let forecastArray = dict["list"] as! NSArray
+            let forecastDayOne = forecastArray[0] as! NSDictionary
+            print("-----------------------------------")
+            print(forecastDayOne)
         })
     }
     

@@ -13,6 +13,8 @@
 		5501C3461D9C142C0011D7C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5501C3451D9C142C0011D7C8 /* Assets.xcassets */; };
 		5501C3491D9C142C0011D7C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5501C3471D9C142C0011D7C8 /* LaunchScreen.storyboard */; };
 		5501C3521D9C144F0011D7C8 /* OpenWeatherMapAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5501C3511D9C144F0011D7C8 /* OpenWeatherMapAPI.swift */; };
+		E7D30E081DA7196500DDB17E /* ForecastTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D30E071DA7196500DDB17E /* ForecastTableViewController.swift */; };
+		E7D30E0A1DA7199300DDB17E /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D30E091DA7199300DDB17E /* ForecastTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		5501C3481D9C142C0011D7C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5501C34A1D9C142C0011D7C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5501C3511D9C144F0011D7C8 /* OpenWeatherMapAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpenWeatherMapAPI.swift; path = Networking/OpenWeatherMapAPI.swift; sourceTree = "<group>"; };
+		E7D30E071DA7196500DDB17E /* ForecastTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastTableViewController.swift; sourceTree = "<group>"; };
+		E7D30E091DA7199300DDB17E /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				5501C3501D9C14360011D7C8 /* Networking */,
 				5501C33E1D9C142C0011D7C8 /* AppDelegate.swift */,
 				5501C3401D9C142C0011D7C8 /* ViewController.swift */,
+				E7D30E071DA7196500DDB17E /* ForecastTableViewController.swift */,
+				E7D30E091DA7199300DDB17E /* ForecastTableViewCell.swift */,
 				5501C3421D9C142C0011D7C8 /* Main.storyboard */,
 				5501C3451D9C142C0011D7C8 /* Assets.xcassets */,
 				5501C3471D9C142C0011D7C8 /* LaunchScreen.storyboard */,
@@ -148,7 +154,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5501C3411D9C142C0011D7C8 /* ViewController.swift in Sources */,
+				E7D30E0A1DA7199300DDB17E /* ForecastTableViewCell.swift in Sources */,
 				5501C33F1D9C142C0011D7C8 /* AppDelegate.swift in Sources */,
+				E7D30E081DA7196500DDB17E /* ForecastTableViewController.swift in Sources */,
 				5501C3521D9C144F0011D7C8 /* OpenWeatherMapAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +317,7 @@
 				5501C34F1D9C142C0011D7C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
