@@ -43,22 +43,31 @@ class ViewController: UIViewController {
         let city = cityTextField.text
         
         openWeatherMapAPI.requestCurrentWeather(buttonPressed: "forecast", city: city!, callback: { (json: Any) -> Void in
+            var outputArray: [[String: String]] = []
+            
             //access the Array for the daily forecasts
             let dict = json as! NSDictionary
             let forecastArray = dict["list"] as! NSArray
-            let forecastDayOne = forecastArray[0] as! NSDictionary
             
-            //retrieves forecast date
-            let forecastDate = forecastDayOne["dt_txt"]
-            
-            //retrieves forecast temperature
-            let tempDict = forecastDayOne["main"] as! NSDictionary
-            let forecastTemp = tempDict["temp"]
-            
-            //retreives forecast description
-            let descriptionArray = forecastDayOne["weather"] as! NSArray
-            let descriptionDict = descriptionArray[0] as! NSDictionary
-            let description = descriptionDict["description"]
+            for i in 0 ..< forecastArray.count {
+                let forecastDayOne = forecastArray[i] as! NSDictionary
+                
+                //retrieves forecast date
+                let forecastDate = forecastDayOne["dt_txt"] as! String
+                
+                //retrieves forecast temperature
+                let tempDict = forecastDayOne["main"] as! NSDictionary
+                let forecastTemp = tempDict["temp"] as! String
+                
+                //retrieves forecast description
+                let descriptionArray = forecastDayOne["weather"] as! NSArray
+                let descriptionDict = descriptionArray[0] as! NSDictionary
+                let description = descriptionDict["description"] as! String
+                
+                outputArray[i] = [ "date" : forecastDate, "temperature" : forecastTemp, "description": description]
+                
+            }
+            print(outputArray)
         })
     }
     
